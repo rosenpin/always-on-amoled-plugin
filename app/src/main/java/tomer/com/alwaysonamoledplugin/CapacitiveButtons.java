@@ -21,7 +21,7 @@ public class CapacitiveButtons extends Service {
         originalCapacitiveButtonsState = intent.getIntExtra("originalCapacitiveButtonsState", 1500);
         System.out.println("Started service");
         System.out.println("State " + state);
-        System.out.println("Brightness  " + originalCapacitiveButtonsState);
+        System.out.println("Original Brightness  " + originalCapacitiveButtonsState);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (Settings.System.canWrite(getApplicationContext()))
                 Settings.System.putInt(getContentResolver(), "button_key_light", state ? 0 : originalCapacitiveButtonsState);
