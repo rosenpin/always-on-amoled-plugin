@@ -2,7 +2,6 @@ package tomer.com.alwaysonamoledplugin;
 
 import android.app.Service;
 import android.content.Intent;
-import android.os.Build;
 import android.os.IBinder;
 import android.provider.Settings;
 
@@ -22,11 +21,7 @@ public class CapacitiveButtons extends Service {
         System.out.println("Started service");
         System.out.println("State " + state);
         System.out.println("Original Brightness  " + originalCapacitiveButtonsState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (Settings.System.canWrite(getApplicationContext()))
-                Settings.System.putInt(getContentResolver(), "button_key_light", state ? 0 : originalCapacitiveButtonsState);
-        } else
-            Settings.System.putInt(getContentResolver(), "button_key_light", state ? 0 : originalCapacitiveButtonsState);
+        Settings.System.putInt(getContentResolver(), "button_key_light", state ? 0 : originalCapacitiveButtonsState);
         stopSelf();
         return super.onStartCommand(intent, flags, startId);
     }
