@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         applicationId "tomer.com.alwaysonamoledplugin"
         minSdkVersion 19
-        targetSdkVersion 22
-        versionCode 3
-        versionName "1.0"
+        targetSdkVersion 24
+        versionCode 4
+        versionName "1.1"
     }
     buildTypes {
         release {
