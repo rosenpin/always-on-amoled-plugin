@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "tomer.com.alwaysonamoledplugin"
+        applicationId "com.tomer.alwaysonamoledplugin"
         minSdkVersion 19
         targetSdkVersion 22
         versionCode 6
