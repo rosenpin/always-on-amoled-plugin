@@ -1,4 +1,4 @@
-package tomer.com.alwaysonamoledplugin;
+package com.tomer.alwaysonamoledplugin;
 
 import android.app.Service;
 import android.content.Intent;
